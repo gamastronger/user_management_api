@@ -69,34 +69,34 @@ API ini dikembangkan untuk mengelola data **User** dengan fitur:
 ## 🖼️ Preview Screenshot
 
 ### 1️⃣ Register API
-![Register API](./assets/RegisterAPI.png)
+![Register API](./src/assets/RegisterAPI.png)
 
 ### 2️⃣ Login API
-![Login API](./assets/LoginAPI.png)
+![Login API](./src/assets/LoginAPI.png)
 
 ### 3️⃣ Get All Users
-![Get All Users](./assets/GetAllUsersAPI.png)
+![Get All Users](./src/assets/GetAllUsersAPI.png)
 
 ### 4️⃣ Update Data Users
-![Update Data Users](./assets/UpdateDataUsers.png)
+![Update Data Users](./src/assets/UpdateDataUsers.png)
 
 ### 5️⃣ Delete Data User by ID
-![Delete Data User By ID](./assets/DeleteDataUserByID.png)
+![Delete Data User By ID](./src/assets/DeleteDataUserByID.png)
 
 ### 6️⃣ Upload Avatar ke Cloudinary
-![Upload Avatar Cloudinary](./assets/UploadAvatarCloudinary.png)
+![Upload Avatar Cloudinary](./src/assets/UploadAvatarCloudinary.png)
 
 ### 7️⃣ Image Link dari Cloudinary
-![Image Link Cloudinary](./assets/imagelinkcloudinary.png)
+![Image Link Cloudinary](./src/assets/imagelinkcloudinary.png)
 
 ### 8️⃣ Tabel Users di Database Server
-![Tabel Users DB Server](./assets/TabelUsersDBServer.png)
+![Tabel Users DB Server](./src/assets/TabelUsersDBServer.png)
 
 ### 9️⃣ Tabel Users Setelah Update
-![Tabel Users DB After Update](./assets/TabelUsersDBAfterUpdate.png)
+![Tabel Users DB After Update](./src/assets/TabelUsersDBAfterUpdate.png)
 
 ### 🔟 Cloudinary Media Library
-![Cloudinary Media Library](./assets/CloudinaryMediaLibrary.png)
+![Cloudinary Media Library](./src/assets/CloudinaryMediaLibrary.png)
 
 ### 11️⃣ Error Handling
-![Error Handling](./assets/ErrorHandling.png)
+![Error Handling](./src/assets/ErrorHandling.png)
