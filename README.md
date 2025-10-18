@@ -69,7 +69,7 @@ API ini dikembangkan untuk mengelola data **User** dengan fitur:
 ## 🖼️ Preview Screenshot
 
 ### 1️⃣ Register API
-![Register API](./assets/RegisterAPI.png)
+![Register API](./public/RegisterAPI.png)
 
 ### 2️⃣ Login API
 ![Login API](./assets/LoginAPI.png)
