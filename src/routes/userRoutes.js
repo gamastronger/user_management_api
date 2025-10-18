@@ -7,8 +7,50 @@ import pool from '../config/db.js';
 
 const router = express.Router();
 
+
+/**
+ * @swagger
+ * /api/users:
+ *   get:
+ *     summary: Get all users
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of users
+ */
 router.get('/', verifyToken, getUsers);
 
+/**
+ * @swagger
+ * /api/users:
+ *   post:
+ *     summary: Create user
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               username:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *               role:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: User created
+ *       400:
+ *         description: Bad request
+ */
 router.post('/', verifyToken, async (req, res) => {
   try {
     const { username, email, password, role } = req.body;
@@ -31,6 +73,42 @@ router.post('/', verifyToken, async (req, res) => {
 
 router.post('/avatar', verifyToken, upload.single('file'), uploadAvatar);
 
+/**
+ * @swagger
+ * /api/users/{id}:
+ *   put:
+ *     summary: Update user
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: User ID
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               username:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *               role:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: User updated
+ *       404:
+ *         description: User not found
+ */
 router.put('/:id', verifyToken, async (req, res) => {
   try {
     const { id } = req.params;
@@ -57,6 +135,27 @@ router.put('/:id', verifyToken, async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/users/{id}:
+ *   delete:
+ *     summary: Delete user
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: User ID
+ *     responses:
+ *       200:
+ *         description: User deleted
+ *       404:
+ *         description: User not found
+ */
 router.delete('/:id', verifyToken, async (req, res) => {
   try {
     const { id } = req.params;
