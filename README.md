@@ -84,7 +84,7 @@ diawal kita harus setting Authorization pada header dan memasukan token yang did
 ![Get All Users](./src/assets/GetAllUsersAPI.png)
 
 ### Tabel Users di Database Server
-![Tabel Users DB Server](./src/assets/TabelUsersDBServer.png)
+![Tabel Users DB Server](./src/assets/TabelUsersDBeaver.png)
 
 ### Update Data Users
 PUT, http://localhost:5000/api/users/2
