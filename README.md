@@ -69,7 +69,7 @@ API ini dikembangkan untuk mengelola data **User** dengan fitur:
 ## Preview Screenshot
 
 ### Register API
-POST, http://localhost:5000/api/auth/register
+POST, http://localhost:5000/api/auth/register <br>
 Daftar dulu sebelum mencoba test login.
 ![Register API](./src/assets/RegisterAPI.png)
 
@@ -92,7 +92,7 @@ ini untuk mengupdate data user yang sudah mendaftar
 ![Update Data Users](./src/assets/UpdateDataUsers.png)
 
 ### Tabel Users Setelah Update
-![Tabel Users DB After Update](./src/assets/TabelUsersDBAfterUpdate.png)
+![Tabel Users DB After Update](./src/assets/TabelUsersDBeaverAfterUpdate.png)
 
 ### Upload Avatar ke Cloudinary
 ![Upload Avatar Cloudinary](./src/assets/UploadAvatarCloudinary.png)
@@ -104,7 +104,7 @@ ini untuk mengupdate data user yang sudah mendaftar
 ![Cloudinary Media Library](./src/assets/CloudinaryMediaLibrary.png)
 
 ### Delete Data User by ID
-![Delete Data User By ID](./src/assets/DeleteDataUserByID.png)
+![Delete Data User By ID](./src/assets/DeleteDataUserID.png)
 
 ### API Swagger Documentation
 ![Delete Data User By ID](./src/assets/api-swg-doc.png)
