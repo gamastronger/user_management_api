@@ -3,7 +3,6 @@
 Proyek ini adalah implementasi RESTful API dengan autentikasi JWT, CRUD data user, upload foto profil ke Cloudinary, serta keamanan server menggunakan CORS dan Helmet.
 
 - **Nama:** Refa Setyagama Abdillah
-- **Program:** Backend API Development
 - **Mentor:** Imam Fadhilah
 
 ---
@@ -74,46 +73,57 @@ Daftar dulu sebelum mencoba test login.
 ![Register API](./src/assets/RegisterAPI.png)
 
 ### Login API
-POST, http://localhost:5000/api/auth/login
+POST, http://localhost:5000/api/auth/login <br>
 login sesuai email dan password yang sudah didaftarkan untuk mendapatkan token
 ![Login API](./src/assets/LoginAPI.png)
 
 ### Get All Users
-GET, http://localhost:5000/api/users
+GET, http://localhost:5000/api/users <br>
 diawal kita harus setting Authorization pada header dan memasukan token yang didapat dari login user, settingan header akan tetap sama sampai proses testing api selesai. setelah semuanya sudah terseting, ketika klik send maka langsung muncul semua user yang sudah terdaftar  
 ![Get All Users](./src/assets/GetAllUsersAPI.png)
 
 ### Tabel Users di Database Server
+ini adalah tampilan tabel yang sudah dibuat menggunaakn Query yang awal tadi beserta isi users yang sudah mendaftar
 ![Tabel Users DB Server](./src/assets/TabelUsersDBeaver.png)
 
 ### Update Data Users
-PUT, http://localhost:5000/api/users/2
-ini untuk mengupdate data user yang sudah mendaftar
+PUT, http://localhost:5000/api/users/2 <br>
+mengupdate data user yang sudah mendaftar
 ![Update Data Users](./src/assets/UpdateDataUsers.png)
 
 ### Tabel Users Setelah Update
+ini adalah tampilan dari table user yang ada di DBeaver setelah testing postman update
 ![Tabel Users DB After Update](./src/assets/TabelUsersDBeaverAfterUpdate.png)
 
 ### Upload Avatar ke Cloudinary
+pada langkah ini, perlu setting body > from-data, pada key dan type pilih 'file', dan pada value upload gambarnya. jika sudah langsung klik send. maka akan muncul respons link cloudinary 
 ![Upload Avatar Cloudinary](./src/assets/UploadAvatarCloudinary.png)
 
 ### Image Link dari Cloudinary
+ini adalah tampilan dari link cloudinary yang sudah sukses melewati tahap upload.
 ![Image Link Cloudinary](./src/assets/imagelinkcloudinary.png)
 
 ### Cloudinary Media Library
+ini adalah tampilan penyimpanan Media Library Website Cloudinary, menampilkan seluruh file yang sudah diunggah oleh user
 ![Cloudinary Media Library](./src/assets/CloudinaryMediaLibrary.png)
 
 ### Delete Data User by ID
+DELETE, http://localhost:5000/api/users/2 <br>
+menghapus data user berdasarkan ID user
 ![Delete Data User By ID](./src/assets/DeleteDataUserID.png)
 
 ### API Swagger Documentation
+Tampilan dari Dokumentasi API Swegger
 ![Delete Data User By ID](./src/assets/api-swg-doc.png)
 
 ### API Swagger Register
+Response Testing Register Swegger
 ![Delete Data User By ID](./src/assets/regis-swg.png)
 
 ### API Swagger Login
+Response Testing Login Swegger
 ![Delete Data User By ID](./src/assets/login-swg.png)
 
 ### Error Handling
+Mekanisme API untuk memberikan pesan kesalahan ("Username, email, password, dan role wajib diisi") kepada pengguna ketika permintaan POST yang dikirim tidak memiliki semua data wajib.
 ![Error Handling](./src/assets/ErrorHandling.png)
