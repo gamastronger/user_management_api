@@ -71,6 +71,33 @@ router.post('/', verifyToken, async (req, res) => {
   }
 });
 
+
+/**
+ * @swagger
+ * /api/users/avatar:
+ *   post:
+ *     summary: Upload user avatar to Cloudinary
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               file:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       200:
+ *         description: Avatar uploaded
+ *       400:
+ *         description: No file uploaded
+ *       500:
+ *         description: Upload failed
+ */
 router.post('/avatar', verifyToken, upload.single('file'), uploadAvatar);
 
 /**
