@@ -103,6 +103,43 @@ router.post('/avatar', verifyToken, upload.single('file'), uploadAvatar);
 /**
  * @swagger
  * /api/users/{id}:
+ *   get:
+ *     summary: Get user by ID
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: User ID
+ *     responses:
+ *       200:
+ *         description: User found
+ *       404:
+ *         description: User not found
+ */
+router.get('/:id', verifyToken, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { rows } = await pool.query(
+      'SELECT id, username, email, role, avatar_url FROM users WHERE id = $1',
+      [id]
+    );
+    if (rows.length === 0) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json(rows[0]);
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching user', error: err.message });
+  }
+});
+
+/**
+ * @swagger
+ * /api/users/{id}:
  *   put:
  *     summary: Update user
  *     tags: [User]
