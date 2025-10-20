@@ -67,7 +67,7 @@ API ini dikembangkan untuk mengelola data **User** dengan fitur:
    ```bash
    npm run dev
 
-## READY TEST POSTMAN
+## DOKUMENTASI POSTMAN
 [Lihat Dokumentasi User Management API di Postman](https://documenter.getpostman.com/view/40828760/2sB3QQKoMQ)
 
 ## Preview Screenshot
