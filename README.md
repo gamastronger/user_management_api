@@ -53,64 +53,28 @@ API ini dikembangkan untuk mengelola data **User** dengan fitur:
    );
 4. **Buat .env**
    ```bash
-   PORT=5000
-   DATABASE_URL=postgres://postgres:password@localhost:5432/user_management
-   JWT_SECRET=your_secret_key
+   PGUSER=postgres
+   PGHOST=localhost
+   PGDATABASE=my_database
+   PGPASSWORD=your_password
+   PGPORT=5432
+   JWT_SECRET=your_jwt_secret
    CLOUDINARY_NAME=your_cloud_name
    CLOUDINARY_KEY=your_api_key
    CLOUDINARY_SECRET=your_api_secret
-
 5. **Jalankan Server**
    Jalankan Server
    ```bash
    npm run dev
 
+## READY TEST POSTMAN
+[Lihat Dokumentasi User Management API di Postman](https://documenter.getpostman.com/view/40828760/2sB3QQKoMQ)
+
 ## Preview Screenshot
-
-### Register API
-POST, http://localhost:5000/api/auth/register <br>
-Daftar dulu sebelum mencoba test login.
-![Register API](./src/assets/RegisterAPI.png)
-
-### Login API
-POST, http://localhost:5000/api/auth/login <br>
-login sesuai email dan password yang sudah didaftarkan untuk mendapatkan token
-![Login API](./src/assets/LoginAPI.png)
-
-### Get All Users
-GET, http://localhost:5000/api/users <br>
-diawal kita harus setting Authorization pada header dan memasukan token yang didapat dari login user, settingan header akan tetap sama sampai proses testing api selesai. setelah semuanya sudah terseting, ketika klik send maka langsung muncul semua user yang sudah terdaftar  
-![Get All Users](./src/assets/GetAllUsersAPI.png)
-
-### Tabel Users di Database Server
-ini adalah tampilan tabel yang sudah dibuat menggunaakn Query yang awal tadi beserta isi users yang sudah mendaftar
-![Tabel Users DB Server](./src/assets/TabelUsersDBeaver.png)
-
-### Update Data Users
-PUT, http://localhost:5000/api/users/2 <br>
-mengupdate data user yang sudah mendaftar
-![Update Data Users](./src/assets/UpdateDataUsers.png)
-
-### Tabel Users Setelah Update
-ini adalah tampilan dari table user yang ada di DBeaver setelah testing postman update
-![Tabel Users DB After Update](./src/assets/TabelUsersDBeaverAfterUpdate.png)
-
-### Upload Avatar ke Cloudinary
-pada langkah ini, perlu setting body > from-data, pada key dan type pilih 'file', dan pada value upload gambarnya. jika sudah langsung klik send. maka akan muncul respons link cloudinary 
-![Upload Avatar Cloudinary](./src/assets/UploadAvatarCloudinary.png)
-
-### Image Link dari Cloudinary
-ini adalah tampilan dari link cloudinary yang sudah sukses melewati tahap upload.
-![Image Link Cloudinary](./src/assets/imagelinkcloudinary.png)
 
 ### Cloudinary Media Library
 ini adalah tampilan penyimpanan Media Library Website Cloudinary, menampilkan seluruh file yang sudah diunggah oleh user
 ![Cloudinary Media Library](./src/assets/CloudinaryMediaLibrary.png)
-
-### Delete Data User by ID
-DELETE, http://localhost:5000/api/users/2 <br>
-menghapus data user berdasarkan ID user
-![Delete Data User By ID](./src/assets/DeleteDataUserID.png)
 
 ### API Swagger Documentation
 Tampilan dari Dokumentasi API Swegger
